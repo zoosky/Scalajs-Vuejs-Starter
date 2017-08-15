@@ -3,10 +3,12 @@ package scalajs.vuejs
 import scala.scalajs.js
 import org.scalajs.dom
 import org.scalajs.dom._
+import js.annotation._
 
 import js.annotation.JSName
 
 @js.native
+@JSGlobal
 class Vue extends js.Object {
   def this(obj: js.Any) = this()
   // instance properties
@@ -65,11 +67,13 @@ class Vue extends js.Object {
 }
 
 @js.native
+@JSGlobal
 class Unwatch extends js.Object {
   def unwatch:Unit =js.native
 }
 
 @js.native
+@JSGlobal
 object Vue extends js.Object{
   def config:js.Dynamic=js.native
   def extend(obj:js.Any):Vue=js.native
@@ -94,6 +98,7 @@ object Vue extends js.Object{
 }
 
 @js.native
+@JSGlobal
 class Directive extends js.Object {
   val name:String =js.native
   val rawName:String =js.native
